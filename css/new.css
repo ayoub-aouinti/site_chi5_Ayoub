@@ -1,0 +1,333 @@
+body{
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Normal Link*/
+.navbar .navbar-nav > li > a{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(91, 227, 186);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 15px;
+    padding-right: 40px;
+    
+}
+
+
+.navbar-inverse{
+    border: none;
+    direction: rtl;
+}
+
+/*Brand Name*/
+.navbar .navbar-brand{
+    color: rgb(82, 206, 181);
+    font-size: 30px;
+    line-height: 40px;
+    font-family: 'Amiri', serif;
+    text-shadow: 1px 1px 1px #7fe8ce;
+    margin-top: -8px;
+    padding-right: 20px;
+
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus{
+    background-color: #8bb2f6;
+    color: #374894;
+    border-bottom: 1px rgb(116, 157, 217) solid;
+    font-size: 17px;
+}
+
+.navbar-nav > li{
+    float: right;
+}
+
+/*start header*/
+.header{
+    background: url(../img/alex.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    min-height: 600px;
+    padding-top: 55px;
+}
+
+.header .intro{
+    background: rgba(91, 199, 174, 0.8);
+    color: #FFF;
+    min-height: 600px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 100%;
+}
+
+.header .intro h1{
+    padding-top: 100px;
+    font-family: 'Aref Ruqaa', serif;
+    font-size: 60px;
+    color: #15181d;
+}
+
+.header .intro p{
+    font-family: 'Cairo', serif;
+    font-size: 20px;
+    color: #DDD;
+    padding-top: 20px;
+}
+
+.header .intro p span{
+    font-size: 20px;
+}
+/*end header*/
+
+/*start about*/
+.about{
+    background-color: #1f5980;
+}
+
+.about .head{
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.about .head h2{
+    padding-top: 20px;
+    color: #29dbc3;
+    font-family: 'Cairo',serif;
+}
+
+.about .head hr{
+    width: 10%;
+    color: #8bcdc4;
+}
+
+.about .head img{
+    margin-top: 20px;
+    height: 200px;
+    width: 200px;
+    border: 2px #29dbc3 solid;
+}
+
+.about .photo{
+    opacity: 0.4;
+}
+
+.about .head p{
+    padding-top: 20px;
+    color: #dff5f2;
+    font-size: 15px;
+    padding-bottom: 40px;
+}
+
+
+
+/* start testimonial section*/
+
+.testimonials{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #29dbc3;
+    
+}
+
+.testimonials .h1{
+    font-family: 'Cairo', serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #d1dbd3;
+}
+
+.testimonials .lead{
+    line-height: 2em;
+    margin-bottom: 10px;
+    font-family: 'Amiri', serif;
+}
+
+.testimonials span{
+    font-size: 18px;
+    font-weight: bold;
+    color: #14296C;
+}
+
+
+.testimonials .carousel-inner{
+    min-height: 160px;
+}
+
+
+.testimonials .carousel-indicators{
+    position: static;
+    width: 100%;
+    margin-left: auto;
+}
+
+.testimonials .carousel-indicators li{
+    text-indent: 0;
+    width: 80px;
+    height: 80px;
+    opacity: 0.4;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 5px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.testimonials .carousel-indicators li.active{
+    opacity: 1;
+    width: 80px;
+    height: 80px;
+    background: none;
+    border: 1px #d1dbd3 solid;
+}
+
+.testimonials .carousel-indicators li img{
+    max-width: 100%;
+}
+
+/* end testimonial section*/
+
+
+
+/*edu section*/
+.edu{
+    background-color: #0e2c42;
+}
+
+.edu .field{
+    padding-top: 50px;
+    color: #d1dbd3;
+}
+
+.edu .field .head{
+      font-family: 'Cairo', serif;
+}
+
+.edu .field .subject{
+    font-family: 'Acme',serif;
+    font-size: 16px;
+}
+
+.edu .field .subject span{
+    color: #14296C;
+}
+
+.edu .project{
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.edu .project .head{
+    font-weight: bold;
+}
+
+.edu .project p .lang{
+      font-size: 15px;
+    font-family: 'Acme',serif;
+    color: #14296C;
+}
+
+/*projects section*/
+.projects{
+    background-color: #29dbc3;
+}
+
+.projects .pro{
+    padding-top: 45px;
+    padding-bottom: 20px;
+}
+
+.projects .pro h2{
+    color: #0c5a7f;
+    font-family: 'Cairo', serif;
+}
+
+.projects .pro hr{
+    width: 5%;
+}
+
+.project .pro .photo{
+    margin-top: 28px;
+}
+
+.projects .pro img{
+    width: 268px;
+    height: 200px;
+    margin-bottom: 10px;
+    border: 2px #0c5a7f solid;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*socialmedia section*/
+.social{
+    background-color: #14296C;
+}
+
+.social .media{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.social .media  a{
+    color: #d1dbd3;
+    padding: 20px 30px;
+}
+
+/* message section */
+.massege{
+    background-color: #29dbc3;
+}
+
+.massege .msg{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-family: 'Cairo',serif;
+}
+
+.massege .msg h2{
+    font-size: 25px;
+    color: #14296C;
+}
+
+.massege .msg hr{
+    width: 7%;
+    padding-bottom: 20px;
+}
+
+.massege .msg input[type="text"],.massege .msg textarea{
+    border: none;
+    background: rgba(255,255,255,.6);
+    color: #fff;
+    border-radius: 0px;
+}
+
+.massege .msg textarea{
+    height: 200px;
+}
+
+.massege .msg button{
+    background-color: #14296C;
+    color: #d1dbd3;
+    border-radius: 0px;
+}
+
+/*footer section*/
+footer{
+    background-color: #14296C;
+    color: #d1dbd3;
+}
+
+footer .foot{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Cairo',serif;
+}
