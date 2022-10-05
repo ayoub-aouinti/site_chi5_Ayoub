@@ -151,7 +151,7 @@ body{
 .testimonials span{
     font-size: 18px;
     font-weight: bold;
-    color: #14296C;
+    color: #1f5980;
 }
 
 
@@ -199,7 +199,7 @@ body{
 
 /*edu section*/
 .edu{
-    background-color: #0e2c42;
+    background-color: #1f5980;
 }
 
 .edu .field{
@@ -217,7 +217,7 @@ body{
 }
 
 .edu .field .subject span{
-    color: #14296C;
+    color: #1f5980;
 }
 
 .edu .project{
@@ -232,7 +232,7 @@ body{
 .edu .project p .lang{
       font-size: 15px;
     font-family: 'Acme',serif;
-    color: #14296C;
+    color: #1f5980;
 }
 
 /*projects section*/
@@ -269,7 +269,7 @@ body{
 
 /*socialmedia section*/
 .social{
-    background-color: #14296C;
+    background-color: #1f5980;
 }
 
 .social .media{
@@ -295,7 +295,7 @@ body{
 
 .massege .msg h2{
     font-size: 25px;
-    color: #14296C;
+    color: #1f5980;
 }
 
 .massege .msg hr{
@@ -315,14 +315,14 @@ body{
 }
 
 .massege .msg button{
-    background-color: #14296C;
+    background-color: #1f5980;
     color: #d1dbd3;
     border-radius: 0px;
 }
 
 /*footer section*/
 footer{
-    background-color: #14296C;
+    background-color: #1f5980;
     color: #d1dbd3;
 }
 
