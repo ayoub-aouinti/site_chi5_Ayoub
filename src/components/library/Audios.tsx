@@ -3,12 +3,14 @@ import { useTranslation } from 'react-i18next';
 import { Play, Pause, Volume2 } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import fallbackList from '../../data/audioList.json';
+import { enrichAudioListWithDurations } from '../../utils/audioUtils';
 
 type AudioItem = {
   filename: string;
   title?: string;
   duration?: string;
   path?: string;
+  surah?: number;
 };
 
 const Audios = () => {
@@ -16,7 +18,7 @@ const Audios = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
   const [list, setList] = useState<AudioItem[]>(fallbackList as AudioItem[]);
-  const [current, setCurrent] = useState<AudioItem | null>(list[0] || null);
+  const [current, setCurrent] = useState<AudioItem | null>((fallbackList as AudioItem[])[0] || null);
 
   useEffect(() => {
     // Try to fetch a manifest at /dist/mp3/manifest.json (if you generate one during build)
@@ -25,24 +27,30 @@ const Audios = () => {
         if (!res.ok) throw new Error('no manifest');
         return res.json();
       })
-      .then((data: AudioItem[]) => {
+      .then(async (data: AudioItem[]) => {
         if (Array.isArray(data) && data.length) {
-          setList(data);
-          setCurrent(data[0]);
+          const enriched = await enrichAudioListWithDurations(data);
+          setList(enriched);
+          if (!current || current.filename === (fallbackList as AudioItem[])[0]?.filename) {
+            setCurrent(enriched[0]);
+          }
         }
       })
-      .catch(() => {
+      .catch(async () => {
         // fallbackList already loaded from src/data/audioList.json
         if (fallbackList && fallbackList.length) {
-          setList(fallbackList as AudioItem[]);
-          setCurrent((fallbackList as AudioItem[])[0]);
+          const enriched = await enrichAudioListWithDurations(fallbackList as AudioItem[]);
+          setList(enriched);
+          if (!current || current.filename === undefined) {
+            setCurrent(enriched[0]);
+          }
         }
       });
   }, []);
 
   useEffect(() => {
     if (current && audioRef.current) {
-      audioRef.current.src = current.path || `/dist/mp3/${current.filename}`;
+      audioRef.current.src = current.path || `/mp3/${current.filename}`;
       setIsPlaying(false);
     }
   }, [current]);
@@ -54,7 +62,7 @@ const Audios = () => {
         audioRef.current.play();
         setIsPlaying(true);
       }
-    }, 100);
+    }, 50);
   };
 
   const togglePlayPause = () => {
@@ -88,24 +96,23 @@ const Audios = () => {
             </div>
             <div className="max-h-96 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-accent scrollbar-track-foreground/10">
               <div className="flex flex-col gap-3">
-                {list.map((item, idx) => (
+                {list.map((item) => (
                   <motion.button
                     key={item.filename}
                     onClick={() => playItem(item)}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className={`w-full text-left px-4 py-3 rounded-lg transition-all duration-300 flex items-center gap-3 ${
+                    className={`w-full text-left px-4 py-3 rounded-lg transition-all duration-300 flex items-center justify-between ${
                       current?.filename === item.filename
                         ? 'bg-accent text-white shadow-lg shadow-accent/30'
                         : 'bg-foreground/5 hover:bg-foreground/10 text-foreground'
                     }`}
                   >
-                    <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded bg-foreground/10 text-sm font-bold">
-                      {idx + 1}
+                    <div className="flex items-center gap-3 flex-1 min-w-0">
+                      <div className="font-amiri font-semibold">{String(item.surah).padStart(2, '0')}- سورة {item.title}</div>
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="font-amiri font-semibold truncate">{item.title || item.filename}</div>
-                      {item.duration && <div className="text-xs opacity-70">{item.duration}</div>}
+                    <div className="flex-shrink-0 text-sm font-medium ltr:ml-2 rtl:mr-2">
+                      {item.duration}
                     </div>
                     {isPlaying && current?.filename === item.filename && (
                       <motion.div
@@ -128,7 +135,7 @@ const Audios = () => {
               <Volume2 size={80} className="text-white opacity-50" />
             </div>
 
-            <h3 className="text-2xl font-amiri font-bold text-center mb-2">{current?.title || t('library.audios.title')}</h3>
+            <h3 className="text-2xl font-amiri font-bold text-center mb-2">{current ? `${String(current.surah).padStart(2, '0')}- سورة ${current.title}` : t('library.audios.title')}</h3>
             <p className="text-center text-foreground/60 font-cairo mb-4">الشيخ أيوب عوينتي</p>
 
             <motion.button
@@ -141,9 +148,8 @@ const Audios = () => {
             </motion.button>
 
             <div className="w-full mt-6">
-              <audio controls className="w-full" controlsList="nodownload">
-                <source src={current?.path || (current ? `/dist/mp3/${current.filename}` : '')} type="audio/mpeg" />
-                Your browser does not support the audio element.
+              <audio ref={audioRef} controls className="w-full" controlsList="nodownload">
+                <source type="audio/mpeg" />
               </audio>
             </div>
           </div>
