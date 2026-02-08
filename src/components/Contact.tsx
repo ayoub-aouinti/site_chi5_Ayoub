@@ -61,7 +61,7 @@ const Contact = () => {
                 <input 
                   type="text" 
                   name="name"
-                  className="w-full bg-foreground/5 border border-foreground/10 rounded-xl px-4 py-3 focus:outline-none focus:border-accent transition-colors text-foreground"
+                  className="w-full bg-foreground/5 dark:bg-white/90 border border-foreground/10 dark:border-white/30 rounded-xl px-4 py-3 focus:outline-none focus:border-accent transition-colors text-foreground dark:text-black placeholder:text-foreground/40 dark:placeholder:text-black/40"
                   placeholder={t('contact.formNamePlaceholder')}
                   required
                 />
@@ -71,7 +71,7 @@ const Contact = () => {
                 <input 
                   type="email" 
                   name="email"
-                  className="w-full bg-foreground/5 border border-foreground/10 rounded-xl px-4 py-3 focus:outline-none focus:border-accent transition-colors text-foreground"
+                  className="w-full bg-foreground/5 dark:bg-white/90 border border-foreground/10 dark:border-white/30 rounded-xl px-4 py-3 focus:outline-none focus:border-accent transition-colors text-foreground dark:text-black placeholder:text-foreground/40 dark:placeholder:text-black/40"
                   placeholder={t('contact.formEmailPlaceholder')}
                   required
                 />
@@ -81,7 +81,7 @@ const Contact = () => {
                 <textarea 
                   rows={4}
                   name="message"
-                  className="w-full bg-foreground/5 border border-foreground/10 rounded-xl px-4 py-3 focus:outline-none focus:border-accent transition-colors resize-none text-foreground"
+                  className="w-full bg-foreground/5 dark:bg-white/90 border border-foreground/10 dark:border-white/30 rounded-xl px-4 py-3 focus:outline-none focus:border-accent transition-colors resize-none text-foreground dark:text-black placeholder:text-foreground/40 dark:placeholder:text-black/40"
                   placeholder={t('contact.formMessagePlaceholder')}
                   required
                 />
