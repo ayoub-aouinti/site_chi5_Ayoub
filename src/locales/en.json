@@ -4,7 +4,7 @@
     "about": "About",
     "testimonials": "Testimonials",
     "recitations": "Recitations",
-    "projects": "Scientific Works",
+    "library": "Library",
     "contact": "Contact"
   },
   "hero": {
@@ -70,5 +70,18 @@
   "footer": {
     "copyright": "All rights reserved for Sheikh Ayoub Aouinti",
     "bio": "Engineer and licensed Qur'an reciter in the ten readings"
+  },
+  "library": {
+    "title": "Library",
+    "videos": "Videos",
+    "audios": "Audio",
+    "publications": "Publications & Research",
+    "videos.subtitle": "Application of Performance Issues in Qaloon's Narration from Nafi'",
+    "videos.playlist": "Video Playlist",
+    "videos.viewPlaylist": "View Full Playlist",
+    "audios.subtitle": "Audio Recordings",
+    "audios.title": "Complete Qur'an Recitation - Qaloon's Narration",
+    "audios.duration": "Duration",
+    "audios.description": "A complete recitation of the Holy Qur'an in the narration of Qaloon from Nafi' by the distinguished Qur'an reciter Sheikh Ayoub Aouinti, may Allah preserve him and grant him long life in His obedience."
   }
 }

@@ -4,7 +4,7 @@
     "about": "Über Uns",
     "testimonials": "Testimonials",
     "recitations": "Rezitationen",
-    "projects": "Wissenschaftliche Arbeiten",
+    "library": "Bibliothek",
     "contact": "Kontakt"
   },
   "hero": {
@@ -70,5 +70,18 @@
   "footer": {
     "copyright": "Alle Rechte vorbehalten für Sheikh Ayoub Aouinti",
     "bio": "Ingenieur und zugelassener Koranrezitant in den zehn Lesarten"
+  },
+  "library": {
+    "title": "Bibliothek",
+    "videos": "Videos",
+    "audios": "Audio",
+    "publications": "Veröffentlichungen und Forschung",
+    "videos.subtitle": "Anwendung von Leistungsfragen in Qaloons Überlieferung von Nafi'",
+    "videos.playlist": "Wiedergabeliste",
+    "videos.viewPlaylist": "Vollständige Wiedergabeliste anzeigen",
+    "audios.subtitle": "Audioaufnahmen",
+    "audios.title": "Vollständige Koranrezitation - Qaloons Überlieferung",
+    "audios.duration": "Dauer",
+    "audios.description": "Eine vollständige Rezitation des Heiligen Korans in der Überlieferung von Qaloon von Nafi' durch den ausgezeichneten Koranrezitanten Sheikh Ayoub Aouinti, möge Gott ihn bewahren und ihm ein langes Leben in seinem Gehorsam schenken."
   }
 }

@@ -28,13 +28,20 @@ const Navbar = () => {
     }
   }, [i18n.language]);
 
+  const [libraryOpen, setLibraryOpen] = useState(false);
+
   const navLinks = useMemo(() => [
     { name: t('nav.home'), href: '#intro' },
     { name: t('nav.about'), href: '#about' },
     { name: t('nav.testimonials'), href: '#testimonials' },
     { name: t('nav.recitations'), href: '#recitations' },
-    { name: t('nav.projects'), href: '#projects' },
     { name: t('nav.contact'), href: '#contact' },
+  ], [t]);
+
+  const libraryLinks = useMemo(() => [
+    { name: t('library.videos'), href: '/library#library-videos' },
+    { name: t('library.audios'), href: '/library#library-audios' },
+    { name: t('library.publications'), href: '/library#library-publications' },
   ], [t]);
 
   const languages = [
@@ -69,6 +76,39 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
+          
+          {/* Library Dropdown */}
+          <div className="relative">
+            <button 
+              onClick={() => setLibraryOpen(!libraryOpen)}
+              className="nav-link font-cairo text-foreground/70 hover:text-foreground flex items-center gap-1"
+            >
+              {t('nav.library')}
+              <span className={`transition-transform ${libraryOpen ? 'rotate-180' : ''}`}>▼</span>
+            </button>
+            <AnimatePresence>
+              {libraryOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="absolute top-full mt-2 bg-[var(--nav-bg)] backdrop-blur-xl border border-foreground/10 rounded-lg shadow-lg overflow-hidden min-w-max rtl:right-0 ltr:left-0"
+                >
+                  {libraryLinks.map((link) => (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setLibraryOpen(false)}
+                      className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-foreground/5 transition-colors"
+                    >
+                      {link.name}
+                    </a>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
           <div className="flex items-center gap-2 border-l border-foreground/10 pl-6 ml-2 rtl:border-r rtl:border-l-0 rtl:pr-6 rtl:pl-2">
             <ThemeToggle />
             <div className="relative">
@@ -167,6 +207,40 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
+              {/* Mobile Library Dropdown */}
+              <div className="border-b border-foreground/5">
+                <button
+                  onClick={() => setLibraryOpen(!libraryOpen)}
+                  className="w-full text-lg font-cairo text-foreground/80 py-2 flex items-center justify-center gap-2"
+                >
+                  {t('nav.library')}
+                  <span className={`transition-transform text-sm ${libraryOpen ? 'rotate-180' : ''}`}>▼</span>
+                </button>
+                <AnimatePresence>
+                  {libraryOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="flex flex-col gap-2 pt-2 bg-foreground/5"
+                    >
+                      {libraryLinks.map((link) => (
+                        <a
+                          key={link.href}
+                          href={link.href}
+                          className="text-sm font-cairo text-foreground/70 py-1 hover:text-accent"
+                          onClick={() => {
+                            setIsOpen(false);
+                            setLibraryOpen(false);
+                          }}
+                        >
+                          {link.name}
+                        </a>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             </div>
           </motion.div>
         )}

@@ -4,7 +4,7 @@
     "about": "À propos",
     "testimonials": "Témoignages",
     "recitations": "Récitations",
-    "projects": "Travaux Scientifiques",
+    "library": "Bibliothèque",
     "contact": "Contact"
   },
   "hero": {
@@ -70,5 +70,18 @@
   "footer": {
     "copyright": "Tous droits réservés au Sheikh Ayoub Aouinti",
     "bio": "Ingénieur et récitant autorisé du Coran dans les dix lectures"
+  },
+  "library": {
+    "title": "Bibliothèque",
+    "videos": "Vidéos",
+    "audios": "Audio",
+    "publications": "Publications et Recherches",
+    "videos.subtitle": "Application des Questions de Performance dans la Narration de Qaloon selon Nafi'",
+    "videos.playlist": "Liste de Lecture",
+    "videos.viewPlaylist": "Voir la Liste Complète",
+    "audios.subtitle": "Enregistrements Audio",
+    "audios.title": "Récitation Complète du Coran - Narration de Qaloon",
+    "audios.duration": "Durée",
+    "audios.description": "Une récitation complète du Saint Coran selon la narration de Qaloon de Nafi' par le récitant du Coran distingué Sheikh Ayoub Aouinti, que Dieu le préserve et lui accorde une longue vie dans son obéissance."
   }
 }
