@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Videos from './library/Videos';
 import Audios from './library/Audios';
@@ -8,7 +8,34 @@ type LibraryTab = 'videos' | 'audios' | 'publications';
 
 const Library = () => {
   const { t } = useTranslation();
-  const [activeTab, setActiveTab] = useState<LibraryTab>('videos');
+  const hashToTab = (hash: string): LibraryTab => {
+    const clean = hash.replace('#', '').trim();
+    if (clean === 'audios' || clean === 'publications' || clean === 'videos') return clean;
+    if (clean === 'library-audios') return 'audios';
+    if (clean === 'library-publications') return 'publications';
+    return 'videos';
+  };
+
+  const [activeTab, setActiveTab] = useState<LibraryTab>(() => {
+    if (typeof window === 'undefined') return 'videos';
+    return hashToTab(window.location.hash);
+  });
+
+  useEffect(() => {
+    const onHashChange = () => setActiveTab(hashToTab(window.location.hash));
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
+
+  const selectTab = (tab: LibraryTab) => {
+    setActiveTab(tab);
+    if (typeof window !== 'undefined') {
+      const nextHash = `#${tab}`;
+      if (window.location.hash !== nextHash) {
+        window.history.replaceState(null, '', nextHash);
+      }
+    }
+  };
 
   const tabs = [
     { id: 'videos', label: t('library.videos') },
@@ -26,7 +53,7 @@ const Library = () => {
           {tabs.map((tab) => (
             <button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id as LibraryTab)}
+              onClick={() => selectTab(tab.id as LibraryTab)}
               className={`px-8 py-3 rounded-full font-bold transition-all ${
                 activeTab === tab.id
                   ? 'bg-accent text-white shadow-lg shadow-accent/30'

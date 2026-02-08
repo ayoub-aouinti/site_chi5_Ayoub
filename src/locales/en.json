@@ -28,15 +28,18 @@
     "quotes": [
       {
         "text": "Sir Ayoub bin Rafiq Aouinti from Tunisia ... I admire the enthusiasm of this young man very much. He excelled long ago in research related to the Holy Qur'an, which remains outstanding in its excellence. Today he presents to us his new book: Gracing the Freed Reader with Exclusive Reading of Ibn Kathir.",
-        "author": "Dr. Kamal Qaddah (Algeria)"
+        "author": "Dr. Kamal Qaddah (Algeria)",
+        "image": "/img/test/1.jpg"
       },
       {
         "text": "I had the pleasure of reviewing this successful work by our respected Sheikh and Professor Ayoub bin Rafiq Aouinti, may God increase him in knowledge and success. This book is distinguished by preserving our Tunisian school with its continuous chain of transmission from the Prophet of this nation.",
-        "author": "Sheikh Al-Qari/ Muhammad Mashfar"
+        "author": "Sheikh Al-Qari/ Muhammad Mashfar",
+        "image": "/img/test/2.jpg"
       },
       {
         "text": "I have known the noble brother Sheikh Ayoub bin Rafiq Aouinti since I certified him in the narration of Qaloon from Nafi'. He is among the enthusiastic youth dedicated to serving the precious Qur'an, despite his official specialization - engineering studies - differing from Islamic Quranic sciences.",
-        "author": "Dr. Fathi bin Al-Sharif Al-Obeidi"
+        "author": "Dr. Fathi bin Al-Sharif Al-Obeidi",
+        "image": "/img/test/3.jpg"
       }
     ]
   },
@@ -58,7 +61,7 @@
     "title": "Contact Us",
     "description": "You can contact Sheikh Ayoub Aouinti through the form below or through social media platforms. We are happy to receive your inquiries and suggestions.",
     "email": "Email",
-    "emailPlaceholder": "contact@ayoub-aouinti.tn",
+    "emailPlaceholder": "ayoubaouinti@gmail.com",
     "formName": "Full Name",
     "formNamePlaceholder": "Enter your name",
     "formEmail": "Email",

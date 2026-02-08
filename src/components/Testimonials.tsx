@@ -10,6 +10,7 @@ const Testimonials = () => {
   const testimonials = t('testimonials.quotes', { returnObjects: true }) as Array<{
     text: string;
     author: string;
+    image?: string;
   }>;
 
   const next = () => setIndex((prev) => (prev + 1) % testimonials.length);
@@ -43,6 +44,14 @@ const Testimonials = () => {
               </p>
               
               <div className="flex flex-col items-center">
+                {testimonials[index]?.image && (
+                  <img
+                    src={testimonials[index]?.image}
+                    alt={testimonials[index]?.author}
+                    className="w-20 h-20 rounded-full object-cover mb-4 border border-foreground/10"
+                    loading="lazy"
+                  />
+                )}
                 <h4 className="text-xl font-bold font-amiri text-accent">{testimonials[index]?.author}</h4>
               </div>
             </motion.div>

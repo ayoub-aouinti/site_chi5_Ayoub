@@ -28,15 +28,18 @@
     "quotes": [
       {
         "text": "Herr Ayoub bin Rafiq Aouinti aus Tunesien ... Ich bewundere den Enthusiasmus dieses jungen Mannes sehr. Er hat sich früher durch Forschungen zum Heiligen Koran hervorgetan, die weiterhin von hervorragender Qualität sind. Heute präsentiert er uns sein neues Buch: Die Gnade des befreiten Lesers mit der exklusiven Lesart des Ibn Kathir.",
-        "author": "Dr. Kamal Qaddah (Algerien)"
+        "author": "Dr. Kamal Qaddah (Algerien)",
+        "image": "/img/test/1.jpg"
       },
       {
         "text": "Ich hatte das Vergnügen, dieses erfolgreiche Werk unseres verehrten Sheikhs und Professors Ayoub bin Rafiq Aouinti zu überprüfen, möge Gott ihn in Wissen und Erfolg vermehren. Dieses Buch zeichnet sich durch die Bewahrung unserer tunesischen Schule mit ihrer kontinuierlichen Überlieferungskette vom Propheten dieser Nation aus.",
-        "author": "Sheikh Al-Qari/ Muhammad Mashfar"
+        "author": "Sheikh Al-Qari/ Muhammad Mashfar",
+        "image": "/img/test/2.jpg"
       },
       {
         "text": "Ich kenne den edlen Bruder Sheikh Ayoub bin Rafiq Aouinti seit ich ihn in der Überlieferung von Qaloon nach Nafi' zertifiziert habe. Er gehört zu den begeisterten Jungen, die sich dem Dienst am kostbaren Koran widmen, obwohl seine offizielle Fachrichtung - Ingenieurstudien - sich von den islamischen Koranwissenschaften unterscheidet.",
-        "author": "Dr. Fathi bin Al-Sharif Al-Obeidi"
+        "author": "Dr. Fathi bin Al-Sharif Al-Obeidi",
+        "image": "/img/test/3.jpg"
       }
     ]
   },
@@ -58,7 +61,7 @@
     "title": "Kontaktieren Sie Uns",
     "description": "Sie können Sheikh Ayoub Aouinti über das untenstehende Formular oder über Social-Media-Plattformen kontaktieren. Wir freuen uns über Ihre Fragen und Vorschläge.",
     "email": "E-Mail",
-    "emailPlaceholder": "contact@ayoub-aouinti.tn",
+    "emailPlaceholder": "ayoubaouinti@gmail.com",
     "formName": "Vollständiger Name",
     "formNamePlaceholder": "Geben Sie Ihren Namen ein",
     "formEmail": "E-Mail",

@@ -28,15 +28,18 @@
     "quotes": [
       {
         "text": "Monsieur Ayoub bin Rafiq Aouinti de Tunisie ... J'admire beaucoup l'enthousiasme de ce jeune homme. Il a excellé autrefois dans les recherches liées au Saint Coran, et celles-ci restent d'une excellence remarquable. Aujourd'hui, il nous présente son nouveau livre : Grâce du Lecteur Affranchi avec la Lecture Exclusive d'Ibn Kathir.",
-        "author": "Dr. Kamal Qaddah (Algérie)"
+        "author": "Dr. Kamal Qaddah (Algérie)",
+        "image": "/img/test/1.jpg"
       },
       {
         "text": "J'ai eu le plaisir d'examiner cet ouvrage réussi de notre respecté Sheikh et Professeur Ayoub bin Rafiq Aouinti, que Dieu l'augmente en science et en succès. Ce livre se distingue par la préservation de notre école tunisienne avec sa chaîne de transmission continue du Prophète de cette nation.",
-        "author": "Sheikh Al-Qari/ Muhammad Mashfar"
+        "author": "Sheikh Al-Qari/ Muhammad Mashfar",
+        "image": "/img/test/2.jpg"
       },
       {
         "text": "Je connais le noble frère Sheikh Ayoub bin Rafiq Aouinti depuis que je l'ai certifié dans la narration de Qaloon selon Nafi'. Il est parmi les jeunes enthousiastes dédiés au service du Coran précieux, malgré sa spécialité officielle - les études d'ingénierie - différente des sciences coraniques islamiques.",
-        "author": "Dr. Fathi bin Al-Sharif Al-Obeidi"
+        "author": "Dr. Fathi bin Al-Sharif Al-Obeidi",
+        "image": "/img/test/3.jpg"
       }
     ]
   },
@@ -58,7 +61,7 @@
     "title": "Contactez-Nous",
     "description": "Vous pouvez contacter le Sheikh Ayoub Aouinti via le formulaire ci-dessous ou via les plateformes de médias sociaux. Nous serions heureux de recevoir vos questions et suggestions.",
     "email": "E-mail",
-    "emailPlaceholder": "contact@ayoub-aouinti.tn",
+    "emailPlaceholder": "ayoubaouinti@gmail.com",
     "formName": "Nom Complet",
     "formNamePlaceholder": "Entrez votre nom",
     "formEmail": "E-mail",

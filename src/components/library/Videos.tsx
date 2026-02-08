@@ -1,17 +1,15 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
+import videoList from '../../data/videoList.json';
 
 const Videos = () => {
   const { t } = useTranslation();
 
   const playlistId = 'PL-lp-Ykl84Jwgccg8fMJjGJORqc6P_MAx';
 
-  // Sample videos from the playlist (you can fetch this dynamically)
-  const videos = [
-    { id: 'ZjkUl8fOsKk', title: 'Video 1' },
-    { id: 'video2', title: 'Video 2' },
-    { id: 'video3', title: 'Video 3' },
-  ];
+  const videos = (videoList as Array<{ id: string; title: string; duration: string }>) || [];
+  const [current, setCurrent] = useState<{ id: string; title: string; duration: string } | null>(videos[0] || null);
 
   return (
     <motion.div
@@ -23,52 +21,49 @@ const Videos = () => {
       
       <div className="grid md:grid-cols-2 gap-8">
         {/* Main video player */}
-        <div className="glass-card overflow-hidden">
-          <div className="relative aspect-video">
-            <iframe
-              className="w-full h-full"
-              src={`https://www.youtube.com/embed/ZjkUl8fOsKk`}
-              title="Playlist Video"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+        {current ? (
+          <iframe
+            className="w-full rounded-3xl border border-foreground/10 overflow-hidden"
+            style={{ aspectRatio: '16 / 9' }}
+            src={`https://www.youtube.com/embed/${current.id}?rel=0&modestbranding=1`}
+            title={current.title}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        ) : (
+          <div className="w-full aspect-[16/9] rounded-3xl border border-foreground/10 flex items-center justify-center text-foreground/60">
+            No video
           </div>
-        </div>
+        )}
 
         {/* Playlist */}
         <div className="space-y-4">
           <h3 className="text-xl font-bold mb-4">{t('library.videos.playlist')}</h3>
-          <div className="space-y-2 max-h-96 overflow-y-auto">
+          <div className="max-h-96 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-accent scrollbar-track-foreground/10">
             {videos.map((video, i) => (
-              <motion.a
+              <motion.button
                 key={video.id}
-                href={`https://www.youtube.com/watch?v=${video.id}&list=${playlistId}`}
-                target="_blank"
-                rel="noopener noreferrer"
+                type="button"
+                onClick={() => {
+                  setCurrent(video);
+                }}
                 whileHover={{ x: 5 }}
-                className="block p-4 glass-card hover:bg-accent/10 transition-colors text-foreground/80 hover:text-foreground"
+                className={`w-full text-left p-4 rounded-xl transition-colors flex items-center justify-between gap-4 ${
+                  current?.id === video.id
+                    ? 'bg-accent text-white shadow-lg shadow-accent/30'
+                    : 'glass-card hover:bg-accent/10 text-foreground/80 hover:text-foreground'
+                }`}
               >
-                <div className="flex items-center gap-3">
-                  <span className="text-accent font-bold text-lg">{i + 1}</span>
-                  <span className="font-cairo">{video.title}</span>
-                </div>
-              </motion.a>
+                <span className="text-sm font-medium whitespace-nowrap">{video.duration}</span>
+                <span className="font-cairo truncate flex-1">{video.title}</span>
+                <span className="text-accent font-bold text-lg">{i + 1}</span>
+              </motion.button>
             ))}
           </div>
-          
-          <motion.a
-            href={`https://www.youtube.com/playlist?list=${playlistId}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="block mt-6 px-6 py-3 bg-accent text-white rounded-full font-bold text-center hover:shadow-lg hover:shadow-accent/30 transition-all"
-          >
-            {t('library.videos.viewPlaylist')}
-          </motion.a>
         </div>
       </div>
+
     </motion.div>
   );
 };

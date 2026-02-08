@@ -30,18 +30,20 @@ const Navbar = () => {
 
   const [libraryOpen, setLibraryOpen] = useState(false);
 
+  const basePath = typeof window !== 'undefined' && window.location.pathname.startsWith('/library') ? '/' : '';
+
   const navLinks = useMemo(() => [
-    { name: t('nav.home'), href: '#intro' },
-    { name: t('nav.about'), href: '#about' },
-    { name: t('nav.testimonials'), href: '#testimonials' },
-    { name: t('nav.recitations'), href: '#recitations' },
-    { name: t('nav.contact'), href: '#contact' },
-  ], [t]);
+    { name: t('nav.home'), href: `${basePath}#intro` },
+    { name: t('nav.about'), href: `${basePath}#about` },
+    { name: t('nav.testimonials'), href: `${basePath}#testimonials` },
+    { name: t('nav.recitations'), href: `${basePath}#recitations` },
+    { name: t('nav.contact'), href: `${basePath}#contact` },
+  ], [t, basePath]);
 
   const libraryLinks = useMemo(() => [
-    { name: t('library.videos'), href: '/library#library-videos' },
-    { name: t('library.audios'), href: '/library#library-audios' },
-    { name: t('library.publications'), href: '/library#library-publications' },
+    { name: t('library.videos'), href: '/library#videos' },
+    { name: t('library.audios'), href: '/library#audios' },
+    { name: t('library.publications'), href: '/library#publications' },
   ], [t]);
 
   const languages = [
