@@ -1,28 +1,31 @@
 import { motion } from 'framer-motion';
-
-const recitations = [
-  {
-    id: 'ypUPuM07bbw',
-    title: 'سورة الفاتحة',
-    desc: 'رواية قالون عن نافع'
-  },
-  {
-    id: 'UIoWHShVOgk',
-    title: 'تلاوة مختارة',
-    desc: 'برواية خلف عن حمزة'
-  },
-  {
-    id: 'Zg4A7kc1UWk',
-    title: 'سورة الفجر',
-    desc: 'بصوت الشيخ أيوب عوينتي'
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 const Recitations = () => {
+  const { t } = useTranslation();
+
+  const recitations = [
+    {
+      id: 'ypUPuM07bbw',
+      title: t('recitations.surahAlFatiha'),
+      desc: t('recitations.waraqalun')
+    },
+    {
+      id: 'UIoWHShVOgk',
+      title: t('recitations.selected'),
+      desc: t('recitations.khalfhamza')
+    },
+    {
+      id: 'Zg4A7kc1UWk',
+      title: t('recitations.surahAlFajr'),
+      desc: t('recitations.bySheikhAyoub')
+    }
+  ];
+
   return (
     <section id="recitations" className="py-24 bg-foreground/[0.02]">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-amiri font-bold text-center mb-16">-- تلاوات مختارة --</h2>
+        <h2 className="text-4xl font-amiri font-bold text-center mb-16">-- {t('recitations.title')} --</h2>
         
         <div className="grid md:grid-cols-3 gap-8">
           {recitations.map((video, i) => (

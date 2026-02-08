@@ -1,0 +1,74 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "testimonials": "Testimonials",
+    "recitations": "Recitations",
+    "projects": "Scientific Works",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Mokri & Engineer Portfolio",
+    "title": "Welcome to the Space of",
+    "titleHighlight": "Sheikh Ayoub Aouinti",
+    "subtitle": "Engineer and licensed Qur'an reciter in the ten readings, combining engineering knowledge with service to the Qur'an",
+    "btnRecitations": "Selected Recitations",
+    "btnAbout": "Learn About Sheikh"
+  },
+  "about": {
+    "title": "About the Reciter",
+    "bio1": "Born in 1990 in Nabeul - Republic of Tunisia. Graduated as an engineer and currently works at an engineering office.",
+    "bio2": "Completed memorization of the Holy Qur'an at age sixteen with the narration of Qaloon from Nafi' Al-Madani through the route of Abu Nashit, under the tutelage of Sheikh Muhammad ibn Ramadan in his hometown of Dar Shaban Al-Fahri.",
+    "bio3": "Studied tajweed and qur'anic readings from prominent Tunisian scholars, with participation in national and international Qur'anic competitions (Egypt, Morocco, and Kuwait), in addition to his scientific contributions in the fields of tajweed and readings.",
+    "recitations10": "Ten Readings",
+    "scientific6": "+6 Scientific Works"
+  },
+  "testimonials": {
+    "title": "What They Say About Sheikh",
+    "quotes": [
+      {
+        "text": "Sir Ayoub bin Rafiq Aouinti from Tunisia ... I admire the enthusiasm of this young man very much. He excelled long ago in research related to the Holy Qur'an, which remains outstanding in its excellence. Today he presents to us his new book: Gracing the Freed Reader with Exclusive Reading of Ibn Kathir.",
+        "author": "Dr. Kamal Qaddah (Algeria)"
+      },
+      {
+        "text": "I had the pleasure of reviewing this successful work by our respected Sheikh and Professor Ayoub bin Rafiq Aouinti, may God increase him in knowledge and success. This book is distinguished by preserving our Tunisian school with its continuous chain of transmission from the Prophet of this nation.",
+        "author": "Sheikh Al-Qari/ Muhammad Mashfar"
+      },
+      {
+        "text": "I have known the noble brother Sheikh Ayoub bin Rafiq Aouinti since I certified him in the narration of Qaloon from Nafi'. He is among the enthusiastic youth dedicated to serving the precious Qur'an, despite his official specialization - engineering studies - differing from Islamic Quranic sciences.",
+        "author": "Dr. Fathi bin Al-Sharif Al-Obeidi"
+      }
+    ]
+  },
+  "recitations": {
+    "title": "Selected Recitations",
+    "surahAlFatiha": "Surah Al-Fatiha",
+    "waraqalun": "Narration of Qaloon from Nafi'",
+    "selected": "Selected Recitation",
+    "khalfhamza": "Narration of Khalaf from Hamzah",
+    "surahAlFajr": "Surah Al-Fajr",
+    "bySheikhAyoub": "Recited by Sheikh Ayoub Aouinti"
+  },
+  "scientificWorks": {
+    "title": "Scientific Works",
+    "subtitle": "Click on the image to download the book",
+    "download": "Download Book"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "You can contact Sheikh Ayoub Aouinti through the form below or through social media platforms. We are happy to receive your inquiries and suggestions.",
+    "email": "Email",
+    "emailPlaceholder": "contact@ayoub-aouinti.tn",
+    "formName": "Full Name",
+    "formNamePlaceholder": "Enter your name",
+    "formEmail": "Email",
+    "formEmailPlaceholder": "name@example.com",
+    "formMessage": "Message",
+    "formMessagePlaceholder": "Write your message here...",
+    "formSubmit": "Send Message"
+  },
+  "footer": {
+    "copyright": "All rights reserved for Sheikh Ayoub Aouinti",
+    "bio": "Engineer and licensed Qur'an reciter in the ten readings"
+  }
+}

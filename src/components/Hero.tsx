@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="intro" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Elements */}
@@ -21,16 +24,16 @@ const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
           >
-            موقع المقرئ والمهندس
+            {t('hero.badge')}
           </motion.span>
           
           <h1 className="text-5xl md:text-8xl font-amiri font-bold mb-8 leading-tight text-foreground">
-            مرحبا بكم في فضاء <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary">الشيخ أيوب عوينتي</span>
+            {t('hero.title')} <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary">{t('hero.titleHighlight')}</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-foreground/60 font-cairo max-w-2xl mx-auto mb-12">
-            مهندس ومقرئ مجاز في القراءات العشر، يجمع بين العلم الهندسي وخدمة كتاب الله الكريم
+            {t('hero.subtitle')}
           </p>
 
           <div className="flex flex-wrap justify-center gap-6">
@@ -40,7 +43,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              تلاوات مختارة
+              {t('hero.btnRecitations')}
             </motion.a>
             <motion.a
               href="#about"
@@ -48,7 +51,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              تعرف على الشيخ
+              {t('hero.btnAbout')}
             </motion.a>
           </div>
         </motion.div>

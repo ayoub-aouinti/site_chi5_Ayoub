@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
 import { Mail, Send, Facebook, Twitter, Linkedin, Youtube } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="contact" className="py-24 bg-foreground/[0.02]">
       <div className="container mx-auto px-6">
@@ -11,9 +14,9 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-amiri font-bold mb-8 text-foreground">تواصل معنا</h2>
+            <h2 className="text-4xl font-amiri font-bold mb-8 text-foreground">{t('contact.title')}</h2>
             <p className="text-foreground/60 font-cairo text-lg mb-10 leading-relaxed">
-              يمكنكم التواصل مع الشيخ أيوب عوينتي عبر النموذج التالي أو من خلال منصات التواصل الاجتماعي. يسعدنا استقبال استفساراتكم واقتراحاتكم.
+              {t('contact.description')}
             </p>
 
             <div className="flex gap-4 mb-12">
@@ -40,8 +43,8 @@ const Contact = () => {
                 <Mail size={24} />
               </div>
               <div>
-                <span className="block text-sm text-foreground/40">البريد الإلكتروني</span>
-                <span className="text-lg font-medium">contact@ayoub-aouinti.tn</span>
+                <span className="block text-sm text-foreground/40">{t('contact.email')}</span>
+                <span className="text-lg font-medium">{t('contact.emailPlaceholder')}</span>
               </div>
             </div>
           </motion.div>
@@ -54,32 +57,32 @@ const Contact = () => {
           >
             <form action="https://formspree.io/f/xvoyrdjw" method="POST" className="space-y-6">
               <div>
-                <label className="block text-sm font-medium mb-2 text-foreground/50">الاسم واللقب</label>
+                <label className="block text-sm font-medium mb-2 text-foreground/50">{t('contact.formName')}</label>
                 <input 
                   type="text" 
                   name="name"
                   className="w-full bg-foreground/5 border border-foreground/10 rounded-xl px-4 py-3 focus:outline-none focus:border-accent transition-colors text-foreground"
-                  placeholder="أدخل اسمك الكريم"
+                  placeholder={t('contact.formNamePlaceholder')}
                   required
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2 text-foreground/50">البريد الإلكتروني</label>
+                <label className="block text-sm font-medium mb-2 text-foreground/50">{t('contact.formEmail')}</label>
                 <input 
                   type="email" 
                   name="email"
                   className="w-full bg-foreground/5 border border-foreground/10 rounded-xl px-4 py-3 focus:outline-none focus:border-accent transition-colors text-foreground"
-                  placeholder="name@example.com"
+                  placeholder={t('contact.formEmailPlaceholder')}
                   required
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2 text-foreground/50">الرسالة</label>
+                <label className="block text-sm font-medium mb-2 text-foreground/50">{t('contact.formMessage')}</label>
                 <textarea 
                   rows={4}
                   name="message"
                   className="w-full bg-foreground/5 border border-foreground/10 rounded-xl px-4 py-3 focus:outline-none focus:border-accent transition-colors resize-none text-foreground"
-                  placeholder="اكتب رسالتك هنا..."
+                  placeholder={t('contact.formMessagePlaceholder')}
                   required
                 />
               </div>
@@ -89,7 +92,7 @@ const Contact = () => {
                 className="w-full btn-primary flex items-center justify-center gap-2 group"
                 type="submit"
               >
-                <span>إرسال الرسالة</span>
+                <span>{t('contact.formSubmit')}</span>
                 <Send size={18} className="group-hover:translate-x-1 transition-transform" />
               </motion.button>
             </form>

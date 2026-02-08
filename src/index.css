@@ -26,6 +26,12 @@
     direction: rtl;
   }
 
+  html[lang="en"] body,
+  html[lang="fr"] body,
+  html[lang="de"] body {
+    direction: ltr;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-amiri tracking-wide;
   }

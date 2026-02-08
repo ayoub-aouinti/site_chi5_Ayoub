@@ -1,0 +1,74 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über Uns",
+    "testimonials": "Testimonials",
+    "recitations": "Rezitationen",
+    "projects": "Wissenschaftliche Arbeiten",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "badge": "Portfolio des Rezitanten und Ingenieurs",
+    "title": "Willkommen im Bereich von",
+    "titleHighlight": "Sheikh Ayoub Aouinti",
+    "subtitle": "Ingenieur und zugelassener Koranrezitant in den zehn Lesarten, der Ingenieurwissen mit dem Dienst am Koran verbindet",
+    "btnRecitations": "Ausgewählte Rezitationen",
+    "btnAbout": "Mehr Erfahren"
+  },
+  "about": {
+    "title": "Über den Rezitanten",
+    "bio1": "Geboren 1990 in Nabeul - Tunesische Republik. Abschluss als Ingenieur und arbeitet derzeit in einem Ingenieurbüro.",
+    "bio2": "Vollendete die Auswendiglernens des Heiligen Korans im Alter von sechzehn Jahren mit der Überlieferung von Qaloon von Nafi' Al-Madani durch die Route von Abu Nashit unter der Anleitung von Sheikh Muhammad ibn Ramadan in seiner Geburtsstadt Dar Shaban Al-Fahri.",
+    "bio3": "Studierte Tajweed und Koranlesarten unter herausragenden tunesischen Gelehrten, nahm an nationalen und internationalen Koranwettbewerben teil (Ägypten, Marokko und Kuwait) und trug wissenschaftlich auf den Gebieten Tajweed und Lesarten bei.",
+    "recitations10": "Zehn Lesarten",
+    "scientific6": "+6 Wissenschaftliche Arbeiten"
+  },
+  "testimonials": {
+    "title": "Was Man Über den Sheikh Sagt",
+    "quotes": [
+      {
+        "text": "Herr Ayoub bin Rafiq Aouinti aus Tunesien ... Ich bewundere den Enthusiasmus dieses jungen Mannes sehr. Er hat sich früher durch Forschungen zum Heiligen Koran hervorgetan, die weiterhin von hervorragender Qualität sind. Heute präsentiert er uns sein neues Buch: Die Gnade des befreiten Lesers mit der exklusiven Lesart des Ibn Kathir.",
+        "author": "Dr. Kamal Qaddah (Algerien)"
+      },
+      {
+        "text": "Ich hatte das Vergnügen, dieses erfolgreiche Werk unseres verehrten Sheikhs und Professors Ayoub bin Rafiq Aouinti zu überprüfen, möge Gott ihn in Wissen und Erfolg vermehren. Dieses Buch zeichnet sich durch die Bewahrung unserer tunesischen Schule mit ihrer kontinuierlichen Überlieferungskette vom Propheten dieser Nation aus.",
+        "author": "Sheikh Al-Qari/ Muhammad Mashfar"
+      },
+      {
+        "text": "Ich kenne den edlen Bruder Sheikh Ayoub bin Rafiq Aouinti seit ich ihn in der Überlieferung von Qaloon nach Nafi' zertifiziert habe. Er gehört zu den begeisterten Jungen, die sich dem Dienst am kostbaren Koran widmen, obwohl seine offizielle Fachrichtung - Ingenieurstudien - sich von den islamischen Koranwissenschaften unterscheidet.",
+        "author": "Dr. Fathi bin Al-Sharif Al-Obeidi"
+      }
+    ]
+  },
+  "recitations": {
+    "title": "Ausgewählte Rezitationen",
+    "surahAlFatiha": "Sure Al-Fatiha",
+    "waraqalun": "Überlieferung von Qaloon von Nafi'",
+    "selected": "Ausgewählte Rezitation",
+    "khalfhamza": "Überlieferung von Khalaf von Hamzah",
+    "surahAlFajr": "Sure Al-Fajr",
+    "bySheikhAyoub": "Rezitiert von Sheikh Ayoub Aouinti"
+  },
+  "scientificWorks": {
+    "title": "Wissenschaftliche Arbeiten",
+    "subtitle": "Klicken Sie auf das Bild, um das Buch herunterzuladen",
+    "download": "Buch Herunterladen"
+  },
+  "contact": {
+    "title": "Kontaktieren Sie Uns",
+    "description": "Sie können Sheikh Ayoub Aouinti über das untenstehende Formular oder über Social-Media-Plattformen kontaktieren. Wir freuen uns über Ihre Fragen und Vorschläge.",
+    "email": "E-Mail",
+    "emailPlaceholder": "contact@ayoub-aouinti.tn",
+    "formName": "Vollständiger Name",
+    "formNamePlaceholder": "Geben Sie Ihren Namen ein",
+    "formEmail": "E-Mail",
+    "formEmailPlaceholder": "name@example.com",
+    "formMessage": "Nachricht",
+    "formMessagePlaceholder": "Schreiben Sie Ihre Nachricht hier...",
+    "formSubmit": "Nachricht Senden"
+  },
+  "footer": {
+    "copyright": "Alle Rechte vorbehalten für Sheikh Ayoub Aouinti",
+    "bio": "Ingenieur und zugelassener Koranrezitant in den zehn Lesarten"
+  }
+}
