@@ -6,8 +6,6 @@ import videoList from '../../data/videoList.json';
 const Videos = () => {
   const { t } = useTranslation();
 
-  const playlistId = 'PL-lp-Ykl84Jwgccg8fMJjGJORqc6P_MAx';
-
   const videos = (videoList as Array<{ id: string; title: string; duration: string }>) || [];
   const [current, setCurrent] = useState<{ id: string; title: string; duration: string } | null>(videos[0] || null);
 
