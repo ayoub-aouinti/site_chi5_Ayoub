@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Send, Facebook, Twitter, Linkedin, Youtube } from 'lucide-react';
+import { Mail, Send, Facebook, Twitter, Linkedin, Youtube, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
@@ -24,7 +24,8 @@ const Contact = () => {
                 { icon: <Facebook />, href: "https://www.facebook.com/ayoub.aouinti.90" },
                 { icon: <Twitter />, href: "https://twitter.com/U9TR5elQZKVEHan" },
                 { icon: <Linkedin />, href: "https://www.linkedin.com/in/aouinti-ayoub-093703169/" },
-                { icon: <Youtube />, href: "https://www.youtube.com/channel/UCKXkGOd1b1DxLvC49qPCQmg" }
+                { icon: <Youtube />, href: "https://www.youtube.com/channel/UCKXkGOd1b1DxLvC49qPCQmg" },
+                { icon: <MessageCircle />, href: "https://wa.me/21651790223" }
               ].map((social, i) => (
                 <motion.a
                   key={i}

@@ -1,5 +1,34 @@
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+
+const CountUp = ({ value, suffix = '' }: { value: number; suffix?: string }) => {
+  const ref = useRef<HTMLSpanElement | null>(null);
+  const isInView = useInView(ref, { once: true, margin: '-50px' });
+  const [display, setDisplay] = useState(0);
+
+  useEffect(() => {
+    if (!isInView) return;
+    const durationMs = 900;
+    const start = performance.now();
+
+    const tick = (now: number) => {
+      const progress = Math.min((now - start) / durationMs, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setDisplay(Math.round(value * eased));
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+
+    requestAnimationFrame(tick);
+  }, [isInView, value]);
+
+  return (
+    <span ref={ref}>
+      {display}
+      {suffix}
+    </span>
+  );
+};
 
 const About = () => {
   const { t } = useTranslation();
@@ -49,11 +78,15 @@ const About = () => {
 
             <div className="mt-10 grid grid-cols-2 gap-6">
               <div className="glass-card p-6 text-center">
-                <span className="block text-3xl font-bold text-accent mb-2">10</span>
+                <span className="block text-3xl font-bold text-accent mb-2">
+                  <CountUp value={10} />
+                </span>
                 <span className="text-sm text-foreground/50">{t('about.recitations10')}</span>
               </div>
               <div className="glass-card p-6 text-center">
-                <span className="block text-3xl font-bold text-accent mb-2">+6</span>
+                <span className="block text-3xl font-bold text-accent mb-2">
+                  <CountUp value={10} suffix="+" />
+                </span>
                 <span className="text-sm text-foreground/50">{t('about.scientific6')}</span>
               </div>
             </div>
